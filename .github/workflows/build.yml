@@ -8,6 +8,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  schedule:
+  - cron: '0 */3 * * *'
 
 jobs:
   build:
@@ -23,4 +25,13 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn clean compile assembly:single
+    - name: Run Jar
+      run: |
+       cp '${{ github.workspace }}/target/MyGithubIndex-1.0-SNAPSHOT-jar-with-dependencies.jar' '${{ github.workspace }}/'
+       java -classpath MyGithubIndex-1.0-SNAPSHOT-jar-with-dependencies.jar cn.luxun.App
+       rm -rf MyGithubIndex-1.0-SNAPSHOT-jar-with-dependencies.jar
+    - name: Push new README.md
+      uses: mikeal/publish-to-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
