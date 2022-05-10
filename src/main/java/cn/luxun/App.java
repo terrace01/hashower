@@ -39,7 +39,6 @@ public class App {
 		String topStarred = getTopStarred(config.getJsonArray());
 		String randomStarred = getRandStarred(config.getJsonArray());
 
-		// System.out.println(repos);
 		String text = "";
 		try (Scanner sc = new Scanner(new FileReader("readme.template.md"))) {
 			while (sc.hasNextLine()) {  //按行读取字符串

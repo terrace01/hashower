@@ -1,8 +1,8 @@
-# 赵振宇 🧑🏻‍💻 ![](https://visitor-badge.laobi.icu/badge?page_id=zhaozhenyu1111.readme)
+# Zhao Zhenyu 🧑🏻‍💻 ![](https://visitor-badge.laobi.icu/badge?page_id=zhaozhenyu1111.readme)
 
-Zhao Zhenyu is a student, located in Zhengzhou.
+A student, located in Zhengzhou.
 
-Dream is to be a full stack engineer
+Dream is to be a full stack engineer.
 
 **Web Developer**
 <p>
