@@ -15,7 +15,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    permissions:
+      issues: write
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
@@ -30,6 +31,7 @@ jobs:
       run: |
        cp '${{ github.workspace }}/target/MyGithubIndex-1.0-SNAPSHOT-jar-with-dependencies.jar' '${{ github.workspace }}/'
        java -classpath MyGithubIndex-1.0-SNAPSHOT-jar-with-dependencies.jar cn.luxun.App
+       rm -rf MyGithubIndex-1.0-SNAPSHOT-jar-with-dependencies.jar
     - name: Push new README.md
       uses: mikeal/publish-to-github-action@master
       env:
