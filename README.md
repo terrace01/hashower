@@ -32,7 +32,6 @@ Dream is to be a full stack engineer.
 </p>
 
 **Environment**
-
 <p>
   <img alt="windows11" src="https://img.shields.io/badge/-windows%2011-fff?style=flat-square&logo=windows&logoColor=blue" />
   <img alt="vscode" src="https://img.shields.io/badge/Visual%20Studio%20Code-blue?style=flat-square&logo=visual-studio-code&logoColor=ffffff" />
